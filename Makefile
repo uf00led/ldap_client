@@ -1,7 +1,6 @@
 CC      = gcc
 CFLAGS  = -c -Wall
-LDPATHS = -Xlinker -rpath=lib/libldap.so -Xlinker -rpath=lib/liblber.so
-LDFLAGS = -lldap -llber
+LDFLAGS = -Llib -lldap -llber 
 SOURCES = main.c src/ldap_client.c src/ldap_argument.c src/ldap_string.c src/file_output.c
 OBJECTS = $(SOURCES: .c=.o)
 EXECUTABLE = ldap_client
